@@ -1,0 +1,13 @@
+// JawaOS pure-black color scheme.
+// Inherits the theme's dark scheme, then drives every surface to #000.
+@import "color_schemes/dark";
+
+$body-background-color: #000000;
+$sidebar-color: #000000;
+$body-text-color: #d4d4d4;
+$body-heading-color: #f2f2f2;
+$border-color: #191919;
+$code-background-color: #000000;
+$code-background-color-dark: #000000;
+$search-background-color: #000000;
+$feedback-color: #000000;

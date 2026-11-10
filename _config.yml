@@ -1,0 +1,25 @@
+# JawaOS website — Just the Docs theme, pure-black scheme, minimal chrome.
+#
+# The kernel repo lives at github.com/JawaOS/JawaOS. The home page carries
+# the project status; keep the chrome (search, footer, edit links) off.
+# Add pages by dropping .md files in the root; they will automatically
+# appear in the sidebar unless marked nav_exclude.
+
+title: JawaOS
+description: A small, from-scratch operating-system kernel for three 64-bit architectures.
+
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+color_scheme: jawa-black
+
+# Strip every UI affordance — the site should be black and empty.
+search_enabled: false
+search:
+  heading_level: 2
+heading_anchors: false
+back_to_top: false
+back_to_top_text: ""
+footer_content: ""
+gh_edit_link: false
+last_edit_timestamp: false
+aux_links: {}
+nav_external_links: []

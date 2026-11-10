@@ -1,0 +1,38 @@
+// Belt and braces on top of the jawa-black scheme: force every known
+// surface and generated CSS variable to pure black, and remove the
+// remaining chrome lines so the page is fully black with no visible UI.
+
+:root {
+  --body-background-color: #000000;
+  --sidebar-color: #000000;
+  --search-background-color: #000000;
+  --border-color: #191919;
+}
+
+body,
+.side-bar,
+.site-header,
+.main,
+.main-header,
+.main-content,
+.site-nav,
+.site-footer {
+  background-color: #000000;
+}
+
+.site-header { border-bottom: 0; }
+.side-bar { border-right: 0; }
+.main-header { border-bottom: 0; }
+.site-footer { border-top: 0; }
+
+// No pages means no footer chrome either. The theme's credit text is
+// rendered with Liquid's `default` filter, so an empty footer_content
+// still prints "This site uses Just the Docs..." — hide all of it:
+// the sidebar credit (desktop), the in-content credit (mobile) and the
+// decorative <hr> above it. `!important` is required on the sidebar
+// credit because the theme's `d-md-block` utility re-enables display at
+// >= 768px.
+.site-footer { display: none !important; }
+.main-content hr { display: none; }
+.main-content > footer,
+.main-content .d-md-none.mt-4 { display: none; }
